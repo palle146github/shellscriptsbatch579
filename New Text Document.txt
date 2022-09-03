@@ -1,0 +1,388 @@
+Class 3
+
+Algorithm:
+
+
+
+Step 1 :-
+
+   Filter only Java Files
+
+   Example :: add.java
+
+          sub.java
+
+          multiply.java
+
+          div.java
+
+Step 2 :- 
+
+        Find a Name of that Java Files
+
+   Example :: add.java ====> add
+
+                   sub.java ====> sub
+
+                   multiply.java ====> multiply
+
+                   div.java ====> div
+
+Step 3 :-
+
+   Create a folder with same name as Java Files Name
+
+        Example :: add/ 
+
+          sub/
+
+          multiply/
+
+          div/
+
+
+
+Step 4 :-
+
+   Copy a Original File and Paste into Specific Folder
+
+
+
+
+for item in `ls *.java`
+
+do
+
+   JavaFileName=`echo $item | awk -F. '{ print $1 }'`
+
+        mkdir $JavaFileName
+
+   cp -r $item $JavaFileName
+
+done
+
+
+
+Class4
+
+echo "Please select any one of arithmetic operations"
+
+echo "Hint : 1.Add 2.Sub 3.Multiply 4.Division"
+
+read userInput
+
+
+
+
+read -p "Enter X Value here : " x
+
+read -p "Enter Y Value here : " y
+
+
+
+z=0
+
+
+
+if [ $userInput == 1 ]
+
+then
+
+   z=$((x+y))
+
+elif [ $userInput == 2 ]
+
+then
+
+   z=$((x-y))
+
+elif [ $userInput == 3 ]
+
+then
+
+   z=$((x*y))
+
+elif [ $userInput == 4 ]
+
+then
+
+   z=$((x/y))
+
+else
+
+   echo "Please Check Your Input  It's Invalid ..."
+
+fi
+
+
+
+echo "Result : $z"
+
+
+read -p "Enter a Player In IPL " player
+
+case $player in
+
+   Dhoni)
+
+      echo "He is Captain Of CSK"
+
+      ;    ;
+
+   Virat)
+
+      echo "He is Captain Of RCB"
+
+      ;;
+
+   Rohit)
+
+      echo "He is Captain Of MI"
+
+      ;;
+
+  Rahul)
+
+      echo "He is Captain Of KXIP"
+
+      ;;
+
+   *)
+
+     echo "Invalid Input :( "
+
+     ;;
+
+esac
+
+
+
+
+Classroom Logo{call productname.classroom /}
+Hi Prasanth,
+Mentors CodInClub posted a new announcement in TFP-FR-579-Ashish-082022-Linux-2.4 579-Ashish-August 18: 7:30 PM - 9:30 PM.
+
+NEW ANNOUNCEMENT
+echo "Please Select Your Employee Type"
+
+echo "1.Fulltime 2.Parttime"
+
+read type
+
+
+
+perHourCost=100
+
+logHoursPerDay=8
+
+salary=0
+
+
+
+isFullTimer=1
+
+isPartTimer=2
+
+
+
+if [ $type == $isFullTimer ]
+
+then
+
+    salary=$((perHourCost*logHoursPerDay))
+
+elif [ $type == $isPartTimer ]
+
+then
+
+    salary=$((perHourCost*logHoursPerDay))
+
+    salary=$((salary/2))
+
+else
+
+   echo "Plese Check Input , Its invalid ..."
+
+fi
+
+
+
+
+
+echo "Employee Income : $salary"
+
+
+
+
+read -p "Enter Your First Name : " fn
+read -p "Enter Your Last Name : " ln
+
+function fullname() {
+echo $1$2
+}
+result="$(fullname $fn $ln)"
+echo "My Fullname is : $result"
+
+
+
+
+
+
+Class
+
+Array's and Dictionaries
+
+Array
+1. Collection of similar data types
+2. Each and every item should have number
+
+touch array.sh
+
+codingclubstaff=("Ashwin" "Nandha" "Shreya" " Pooja")
+
+echo "Array Is: ${codingclubstaff[@]}"
+echo "Array Is: ${codingclubstaff[0]}"
+echo "Array Is: ${codingclubstaff[1]}"
+
+CRUD=> Create Retrieve Update Delete
+Create
+
+codingclubstaff[4]="Monika"
+codingclubstaff[5]="Rajesh"
+
+
+Delete
+
+unset 'codingclubstaff[2]'
+
+Index numbe of Array
+
+${!codingclubstaff[@]}
+
+Length
+${#codingclubstaff[@]}
+
+For loop
+
+rcbTeam=("MaxWell "Virat" "ABD" " Chahal")
+
+for player in ${rcbTeam[@]}
+do
+if [ $player == "ABD" ]
+then
+echo "$player Batsman of RCB"
+elif [ $player == "Chahal" ]
+then
+echo "$playes is a bowler"
+fi
+done
+
+ipl.sh
+
+echo "Select your favorite team here"
+echo "hint CSK RCB GT"
+read temaName
+win=0
+lose=0
+points=0
+runrate=""
+Match_Played=14
+rcbTeam=("MaxWell "Virat" "ABD" " Chahal")
+function errorHandler(){
+echo "Your input is Invalid Please try again"}
+function playofEligibility(){
+if[ $1 -le 4 ]
+then
+	echo "$2 is eligible"
+else
+echo "$2 is not eligible for playoffs"
+fi
+}
+function rolesAndResponsibility(){
+if [ $1 == "RCB" ]
+then
+	for item in ${rcbTeam[]@}
+	do
+		if [ $item == "Virat" ]
+		then
+
+		fi
+
+	done
+elif [ $1 == "MI" ]
+then
+
+else
+	echo ""
+
+fi
+
+}
+function pointsestimation()
+{
+lose=$((Match_Player-$1))
+points=$(($1*2))
+echo "Teacm U Choosen, $teamName"
+echo "Place Secured :$2"
+echo "Matches Played:$Match_Played"
+echo "Won $1, Lost $lose"
+echo "Pointe: $points"
+playofEligibility $2 $teamName
+rolesAndResponsibility $teamName
+
+}
+if [ $teamName == "MI" ]
+then
+	position=10
+	win=4
+	runRate="-0.506"
+	pointsestimation $win $position$runRate
+elif [ $teamName == "CSK" ]
+then
+	position=9
+	win=4
+	runRate="-0.203"
+	pointsestimation $win $position$runRate
+elif [ $teamName == "RCB" ]
+then
+	position=4
+	win=8
+	runRate="-0.253"
+	pointsestimation $win $position$runRate
+else 
+	errorHandler
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

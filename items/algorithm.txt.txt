@@ -1,0 +1,21 @@
+Step1:
+
+Using for loop List out the files in the current directory
+
+Step2:
+
+Seperate filename and extension of a filename
+
+Step3:
+
+Create a folder with filename also with the extension in respective folders
+
+
+step4:
+
+Move files into the respcive folders
+
+
+Step5:
+
+Move all folders into the backup folder

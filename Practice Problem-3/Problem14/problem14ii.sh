@@ -1,0 +1,1 @@
+cat data.csv | grep CAPTAIN | awk '{total=total+$7}END{print total}'

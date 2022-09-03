@@ -1,0 +1,1 @@
+cat data.csv | awk '{total=total+$4}END{print total/NR}'
