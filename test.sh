@@ -8,3 +8,12 @@ cp -r $item $Filename
 
 
 done
+
+
+
+for item in ls
+
+do
+
+
+done
